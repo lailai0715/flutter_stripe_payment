@@ -42,6 +42,7 @@ class StripeDialog : DialogFragment() {
         // Fetch arguments from bundle and set title
         val title = arguments?.getString("title", "Add Source")
         dialog?.setTitle(title)
+        dialog?.setCanceledOnTouchOutside(false)
         view.findViewById<View>(R.id.buttonSave)?.setOnClickListener {
             getToken()
         }
